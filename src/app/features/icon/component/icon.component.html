@@ -1,0 +1,25 @@
+<ng-container *ngIf="iconConfig; else loader">
+  <div [ngStyle]="{ width: iconConfig.iconSize ? iconConfig.iconSize : 'fit-content' }">
+    <div class="icon-img">
+      <img
+        [src]="iconConfig.src"
+        [ngStyle]="{ width: iconConfig.iconSize ? '100%' : null }"
+      />
+    </div>
+    <div class="icon-text" *ngIf="iconConfig.iconText">
+      <p
+        [ngStyle]="{
+          fontSize: iconConfig.iconText.textSize,
+          color: iconConfig.iconText.textColor,
+          textAlign: iconConfig.iconText.textCentered ? 'center' : null,
+        }"
+        [ngClass]="iconConfig.iconText.bootstrapClass"
+      >
+        {{ iconConfig.iconText.text }}
+      </p>
+    </div>
+  </div>
+</ng-container>
+<ng-template #loader>
+  <div class="loader">...loading</div>
+</ng-template>

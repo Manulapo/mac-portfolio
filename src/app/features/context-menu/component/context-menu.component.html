@@ -1,0 +1,10 @@
+<div
+  class="context-menu"
+  *ngIf="isVisible"
+  [ngStyle]="{ width: 'fit-content',position: 'absolute', top: y + 'px', left: x + 'px' }"
+>
+  <button *ngFor="let item of menuItems" (click)="onMenuItemClick(item)">
+    <img [src]="item.icon" />
+    <span>{{ item.label }}</span>
+  </button>
+</div>
