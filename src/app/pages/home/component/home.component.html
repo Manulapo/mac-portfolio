@@ -1,10 +1,12 @@
-<app-icon
-  [iconConfig]="iconConfig"
-  appContextMenu
-  [contextItemsList]="menuItems"
-></app-icon>
-<app-icon
-  [iconConfig]="iconConfig"
-  appContextMenu
-  [contextItemsList]="menuItems2"
-></app-icon>
+<app-desktop appContextMenu [contextItemsList]="menuItems3">
+  <app-icon
+    appContextMenu
+    [iconConfig]="iconConfig"
+    [contextItemsList]="menuItems"
+  ></app-icon>
+  <app-icon
+    appContextMenu
+    [iconConfig]="iconConfig"
+    [contextItemsList]="menuItems2"
+  ></app-icon>
+</app-desktop>

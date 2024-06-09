@@ -1,1 +1,19 @@
+<app-active-bar></app-active-bar>
 <router-outlet></router-outlet>
+<app-nav-bar>
+    <div apps>test</div>
+        <div active>
+          <app-icon
+            appContextMenu
+            [iconConfig]="iconConfig"
+          ></app-icon>
+          <app-icon
+            appContextMenu
+            [iconConfig]="iconConfig"
+          ></app-icon>
+          <app-icon
+            appContextMenu
+            [iconConfig]="iconConfig"
+          ></app-icon>
+        </div>
+</app-nav-bar>

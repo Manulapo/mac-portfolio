@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DesktopComponent } from './component/desktop.component';
+import { DynamicRenderComponent } from './dynamic-render.component';
 
-describe('DesktopComponent', () => {
-  let component: DesktopComponent;
-  let fixture: ComponentFixture<DesktopComponent>;
+describe('DynamicRenderComponent', () => {
+  let component: DynamicRenderComponent;
+  let fixture: ComponentFixture<DynamicRenderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DesktopComponent]
+      declarations: [DynamicRenderComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(DesktopComponent);
+    fixture = TestBed.createComponent(DynamicRenderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

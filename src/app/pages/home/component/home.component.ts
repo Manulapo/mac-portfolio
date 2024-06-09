@@ -23,10 +23,21 @@ export class HomeComponent implements OnInit {
 
   menuItems : menuItemModel[] = [
     { label: 'Home', icon: '', action: () => console.log('home') },
+    { label: 'Home', icon: '', action: () => console.log('home') },
+    { label: 'Home', icon: '', action: () => console.log('home') },
+    { label: 'Home', icon: '', action: () => console.log('home') },
+    { label: 'Home', icon: '', action: () => console.log('home') },
   ];
 
   menuItems2 : menuItemModel[] = [
+    { label: 'eee', icon: '', action: () => console.log('test') },
+    { label: 'eee', icon: '', action: () => console.log('test') },
+  ];
+
+  menuItems3 : menuItemModel[] = [
     { label: 'test', icon: '', action: () => console.log('test') },
+    { label: 'e', icon: '', action: () => console.log('test') },
+    { label: '3', icon: '', action: () => console.log('test') },
   ];
   
   constructor() { }

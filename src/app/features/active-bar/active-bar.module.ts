@@ -6,6 +6,7 @@ import { ActiveBarComponent } from './component/active-bar.component';
   imports: [
     CommonModule
   ],
-  declarations: [ActiveBarComponent]
+  declarations: [ActiveBarComponent],
+  exports: [ActiveBarComponent]
 })
 export class ActiveBarModule { }

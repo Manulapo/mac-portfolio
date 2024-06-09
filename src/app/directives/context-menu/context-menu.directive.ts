@@ -1,5 +1,5 @@
 // context-menu.directive.ts
-import { Directive, HostListener, Input, ComponentRef, ViewContainerRef, OnDestroy, Injector } from '@angular/core';
+import { Directive, HostListener, Input, ComponentRef, ViewContainerRef, OnDestroy, Injector, ElementRef } from '@angular/core';
 import { ContextMenuComponent } from '../../features/context-menu/component/context-menu.component';
 import { menuItemModel } from './model/menu-item.model';
 import { ContextMenuService } from '../../services/context-menu-service/context-menu.service';
@@ -14,7 +14,8 @@ export class ContextMenuDirective implements OnDestroy {
   constructor(
     private viewContainerRef: ViewContainerRef,
     private injector: Injector,
-    private contextMenuService: ContextMenuService
+    private contextMenuService: ContextMenuService,
+    private elRef: ElementRef 
   ) {
     this.contextMenuService.closeMenuObservable.subscribe(() => {
       this.closeMenu();
@@ -24,6 +25,11 @@ export class ContextMenuDirective implements OnDestroy {
   @HostListener('contextmenu', ['$event'])
   onRightClick(event: MouseEvent) {
     event.preventDefault();
+    event.stopPropagation(); 
+    if (!this.elRef.nativeElement.contains(event.target)) {
+      return; 
+    }
+
     this.closeMenu();
 
     this.contextMenuService.notifyCloseMenu();

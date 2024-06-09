@@ -1,0 +1,38 @@
+:host {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 30%;
+  transform: translateX(-50%);
+  height: 100px;
+  border-radius: 20px;
+  padding: 1em;
+  background-color: red;
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  .navbar-apps {
+    width: 800px;
+  }
+
+  .active-apps > *,.navbar-apps > *{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+  }
+
+  .nav-divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: #333;
+    width: 2px;
+    height: 100%;
+    border-radius: 50px;
+  }
+}
