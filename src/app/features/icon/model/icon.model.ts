@@ -3,6 +3,7 @@ export interface iconConfigModel {
     src: string;
     iconSize: string;
     iconText?: textModel;
+    bootstrapClass?: string;
 }
 
 export interface textModel {

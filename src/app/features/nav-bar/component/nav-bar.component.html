@@ -1,6 +1,8 @@
 <ng-container >
     <div class="navbar-apps">
-        ngconta
+        <ng-container *ngFor="let component of componentsArray">
+            <app-dynamic-render [renderComponentConfig]="component"></app-dynamic-render>
+        </ng-container>
     </div>
     <div class="nav-divider"></div>
     <div class="active-apps"></div>

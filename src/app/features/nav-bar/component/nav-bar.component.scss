@@ -13,8 +13,10 @@
   align-items: center;
   gap: 1em;
 
-  .navbar-apps {
-    width: 800px;
+  .navbar-apps, .active-apps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .active-apps > *,.navbar-apps > *{

@@ -14,7 +14,7 @@ import { ContextMenuModule } from './features/context-menu/context-menu.module';
 import { WindowModule } from './features/window/window.module';
 import { DesktopModule } from './features/desktop/desktop.module';
 import { sharedDirectivesModule } from './shared-module/shared-directives-module.module';
-import { DynamicRenderComponent } from './features/dynamic-render/dynamic-render.component';
+import { DynamicRenderModule } from './features/dynamic-render/dynamic-render.module';
 
 const sharedModules = [
   NavBarModule,
@@ -32,7 +32,6 @@ const sharedModules = [
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicRenderComponent,
   ],
   imports: [
     BrowserModule,
